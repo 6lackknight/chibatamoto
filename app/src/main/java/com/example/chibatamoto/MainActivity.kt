@@ -22,6 +22,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.chibatamoto.ui.theme.ChibatamotoTheme
 import android.content.Intent
 import android.net.Uri
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.text.AnnotatedString
@@ -683,7 +684,7 @@ From digital consultations and herbal therapies to public seminars, workplace tr
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun TestimonialImageScreen(imageIndex: Int, navController: NavHostController) {
     val testimonialImages = (1..25).map { "k$it" }
